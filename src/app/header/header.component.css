@@ -1,0 +1,9 @@
+.header-active {
+  color: #000;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.header-dropdown-list {
+  padding-left: 10px;
+}
