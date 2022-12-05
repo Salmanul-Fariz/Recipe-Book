@@ -8,11 +8,12 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link header-dropdown-list header-active" aria-current="page" href="#"
-            (click)="onSelect('recipe')">Recipes</a>
+          <a class="nav-link header-dropdown-list " aria-current="page" href="#" (click)="onSelect('recipe')"
+            [ngClass]="{'header-active':showClickClass}">Recipes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link header-dropdown-list" href="#" (click)="onSelect('shoipping-list')">Shoipping</a>
+          <a class="nav-link header-dropdown-list" href="#" (click)="onSelect('shoipping-list')"
+            [ngClass]="{'header-active':!showClickClass}">Shoipping</a>
         </li>
         <li class="nav-item dropdown d-flex header-dropdown-list">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
