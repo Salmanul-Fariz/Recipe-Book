@@ -1,1 +1,11 @@
-<p>recipe-item works!</p>
+<a href="" class="d-flex pb-4">
+  <div class="col-12 d-flex">
+    <div class="col-4">
+      <img [src]="recipe.imagePath" alt="" class="w-100 rounded" style="max-height:160px ;">
+    </div>
+    <div class="col-8 ms-2 recipe-list-bar">
+      <h4 class="">{{ recipe.name }}</h4>
+      <p class="list-group-item-text">{{ recipe.description }}</p>
+    </div>
+  </div>
+</a>
