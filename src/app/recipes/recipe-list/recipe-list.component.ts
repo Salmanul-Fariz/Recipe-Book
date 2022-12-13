@@ -18,8 +18,6 @@ export class RecipeListComponent {
   ];
 
   onSelectedRecipe(recipe: Recipes) {
-    console.log('heki');
-
     this.recipeWasSelected.emit(recipe);
   }
 }
