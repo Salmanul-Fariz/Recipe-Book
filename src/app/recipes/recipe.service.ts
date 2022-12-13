@@ -1,6 +1,9 @@
+import { EventEmitter } from '@angular/core';
 import { Recipes } from './recipes.modal';
 
 export class RecipeService {
+  recipeSelected = new EventEmitter<Recipes>();
+
   private recipes: Recipes[] = [
     new Recipes(
       'Easy Recipie',
