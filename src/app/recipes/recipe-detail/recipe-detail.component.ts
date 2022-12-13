@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { RecipeService } from '../recipe.service';
 import { Recipes } from '../recipes.modal';
 
 @Component({
@@ -8,4 +9,10 @@ import { Recipes } from '../recipes.modal';
 })
 export class RecipeDetailComponent {
   @Input() recipe: Recipes;
+
+  constructor(private recipeService: RecipeService) {}
+
+  addToShoppingList() {
+    this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+  }
 }

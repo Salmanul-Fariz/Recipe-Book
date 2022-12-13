@@ -14,8 +14,18 @@ export class ShoppingService {
     return this.ingredients.slice();
   }
 
-  addIngredients(ingrediant: Ingrediant) {
+  addIngredient(ingrediant: Ingrediant) {
     this.ingredients.push(ingrediant);
+    this.ingredientChanged.emit(this.ingredients.slice());
+  }
+
+  addIngredients(ingrediant: Ingrediant[]) {
+    // for (let el of ingrediant) {
+    //   this.addIngredient(el);
+    // }
+
+    // Using ES6 Methord
+    this.ingredients.push(...ingrediant);
     this.ingredientChanged.emit(this.ingredients.slice());
   }
 }
